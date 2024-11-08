@@ -1,35 +1,28 @@
-const { FlatCompat } = require('@eslint/eslintrc');
-const js = require('@eslint/js');
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
-
-module.exports = [
-  ...compat.extends([
-    "eslint:recommended",
-    "plugin:diff/diff",     // Include the diff plugin here
-    "plugin:sonarjs/recommended"
-  ]),
-  {
+module.exports = {
     env: {
-      node: true,
-      es6: true,
-      mocha: true,
+        browser: true,
+        es2021: true,
+        node: true,
+        jquery: true
     },
     parserOptions: {
-      ecmaVersion: 2018,
-      sourceType: 'module',
+        ecmaVersion: "latest",
+        sourceType: "module"
+    },
+    // plugins: ["diff/staged"],
+
+    extends: ["plugin:diff/staged"],
+    ignorePatterns: [
+        "**/vendors/**/*.js",
+        "test/**/*.js",
+        "webpack_obfuscator/**/*.js",
+        "dist/**/*.js"
+    ],
+    globals: {
+        "_": "readonly"
     },
     rules: {
-      'no-magic-numbers': 'warn',
-      'no-unused-vars': 'warn',
-      'eqeqeq': 'warn',
-      'no-console': 'warn',
-      'curly': 'error',
-      'semi': ['error', 'always'],
-      'quotes': ['error', 'single']
-    },
-    parser: "@babel/eslint-parser"
-  }
-];
+        "no-magic-numbers": ["warn", { "ignore": [0], "ignoreArrayIndexes": true }],
+        "no-console": "warn"
+    }
+};

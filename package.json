@@ -1,0 +1,27 @@
+{
+  "name": "eslinting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint -c .eslintrc.js ./ --format html --output-file report.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ripul05/eslinting.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ripul05/eslinting/issues"
+  },
+  "homepage": "https://github.com/ripul05/eslinting#readme",
+  "devDependencies": {
+    "eslint-plugin-diff": "^2.0.1",
+    "eslint": "^8.17.0"
+  },
+  "dependencies": {
+    "eslint": "^8.17.0"
+  }
+}
