@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "eslint": "eslint -c .eslintrc.json ./ --format html --output-file report.html"
+    "eslint": "eslint -c .eslintrc.js ./ --format html --output-file report.html"
   },
   "repository": {
     "type": "git",
