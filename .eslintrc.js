@@ -9,11 +9,9 @@ module.exports = {
         ecmaVersion: "latest",
         sourceType: "module"
     },
-    plugins: ["diff"],
-    extends: [
-        "eslint:recommended",
-        "plugin:diff/diff",
-    ],
+    // plugins: ["diff/staged"],
+
+    extends: ["plugin:diff/staged"],
     ignorePatterns: [
         "**/vendors/**/*.js",
         "test/**/*.js",
