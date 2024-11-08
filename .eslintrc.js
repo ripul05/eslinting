@@ -12,7 +12,7 @@ module.exports = {
     plugins: ["diff"],
     extends: [
         "eslint:recommended",
-        "plugin:diff/diff"
+        "plugin:diff/diff",
     ],
     ignorePatterns: [
         "**/vendors/**/*.js",
